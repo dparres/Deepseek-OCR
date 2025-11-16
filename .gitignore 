@@ -1,0 +1,54 @@
+# ---------------------------------------------------------
+# Python & uv
+# ---------------------------------------------------------
+.venv/
+uv.lock.backup
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editable build metadata
+*.egg-info/
+build/
+dist/
+
+# ---------------------------------------------------------
+# VS Code / Devcontainer
+# ---------------------------------------------------------
+.vscode/
+.devcontainer/*.log
+.devcontainer/Dockerfile*~
+*.code-workspace
+
+# ---------------------------------------------------------
+# Docker
+# ---------------------------------------------------------
+*.pid
+Dockerfile.*.local
+
+# ---------------------------------------------------------
+# Project-specific folders
+# ---------------------------------------------------------
+
+# Model outputs, checkpoints, weights
+checkpoints/
+models/
+outputs/
+runs/
+
+# Images or data used for testing
+images/
+data/
+datasets/
+
+# Script-generated files
+*.out
+*.log
+*.tmp
+
+# ---------------------------------------------------------
+# OS / System junk
+# ---------------------------------------------------------
+.DS_Store
+Thumbs.db

@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "deepseek-ocr"
+version = "0.1.0"
+description = "Project leveraging Deepseek-OCR for advanced Optical Character Recognition tasks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Daniel Parres" }
+]
+keywords = ["ocr", "deepseek", "pytorch", "deep-learning", "vision"]
+
+# Runtime Dependencies (Core Project Requirements)
+dependencies = [
+    # ML/Deep Learning Frameworks (Pinned versions for stability)
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "torchaudio==2.6.0",
+
+    # Model and Attention Libraries
+    "transformers==4.46.3",
+    "tokenizers==0.20.3",
+    "flash-attn==2.7.3",
+
+    # Utilities and Document Processing
+    "PyMuPDF",
+    "img2pdf",
+    "Pillow",
+    "numpy",
+    "einops",
+
+    # Configuration Utilities
+    "easydict",
+    "addict",
+
+    # General Utilities
+    "psutil",
+    "markupsafe==2.1.5",
+]
+
+
+[project.optional-dependencies]
+# Development Dependencies (Formatting, Testing, Type Checking)
+dev = [
+    "black",  # Code formatting
+    "isort",  # Import sorting
+    "mypy",   # Static type checking
+    "pytest", # Standard testing framework
+]
+
+[tool.uv.extra-build-dependencies]
+# Dependencies needed to build/compile specific packages like flash-attn
+flash-attn = ["setuptools", "packaging", "wheel", "torch==2.6.0"]
+
+
+[tool.setuptools.packages.find]
+# Instructs setuptools to look for packages under the 'src' directory
+where = ["src"]
+
+
+[tool.black]
+# Black Formatting Configuration
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+# Isort Configuration
+profile = "black"
+line_length = 88
+known_first_party = "deepseek_ocr"
