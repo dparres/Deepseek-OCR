@@ -13,7 +13,7 @@ The environment automatically configures Python, installs dependencies, and enab
 
 ## Features
 
-- **GPU support** via CUDA (Dockerfile.gpu)  
+- **GPU support** via CUDA (`Dockerfile`)  
 - **Automatic Python environment** using `uv venv`  
 - **Editable install** for local development (`src/deepseek_ocr`)  
 - **Example inference script** (`run_model_script.py`)  
