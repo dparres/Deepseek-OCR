@@ -4,7 +4,6 @@ FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 ENV PATH="/root/.local/bin:$PATH"
-ENV TORCH_INDEX_URL="https://download.pytorch.org/whl/cu118"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \

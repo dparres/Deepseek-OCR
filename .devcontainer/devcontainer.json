@@ -22,7 +22,7 @@
     }
   },
 
-"postCreateCommand": "uv venv && uv sync --extra-index-url $TORCH_INDEX_URL && uv pip install -e .[dev]",
+"postCreateCommand": "uv venv && uv sync && uv pip install -e .[dev]",
 
 "runArgs": ["--gpus", "all"]
 

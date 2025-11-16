@@ -2,10 +2,10 @@
 
 This repository provides a fully containerized development setup for running **DeepSeek-OCR** with **GPU acceleration**, using:
 
-- **VS Code Dev Containers**
-- **NVIDIA CUDA Docker images**
-- **uv** for fast & reproducible Python environments
-- **A clean project layout** for inference scripts and model code
+- **VS Code Dev Containers**.
+- **NVIDIA CUDA Docker images**.
+- **uv** for fast & reproducible Python environments.
+- **A clean project layout** for inference scripts and model code.
 
 The environment automatically configures Python, installs dependencies, and enables GPU support if available.
 
@@ -13,16 +13,16 @@ The environment automatically configures Python, installs dependencies, and enab
 
 ## Running in VS Code (Recommended)
 
-1. Open the project folder in **VS Code**  
-2. Press **Ctrl + Shift + P**  
-3. Choose **“Dev Containers: Rebuild and Reopen in Container”**  
+1. Open the project folder in **VS Code**.
+2. Press **Ctrl + Shift + P**.
+3. Choose **“Dev Containers: Rebuild and Reopen in Container”**.  
 
 VS Code will:
 
-- Build the GPU-enabled Docker image  
-- Create a `.venv` environment with `uv`  
-- Install dependencies listed in `pyproject.toml`  
-- Activate the environment automatically  
+- Build the GPU-enabled Docker image.  
+- Create a `.venv` environment with `uv`.  
+- Install dependencies listed in `pyproject.toml`.  
+- Activate the environment automatically.  
 
 You're ready to develop!
 
@@ -48,13 +48,13 @@ python run_model_script.py
 
 To use the GPU devcontainer, you must have:
 
-- NVIDIA GPU
+- NVIDIA GPU.
 
-- NVIDIA drivers installed
+- NVIDIA drivers installed.
 
-- Docker + NVIDIA Container Toolkit
+- Docker + NVIDIA Container Toolkit.
 
-- CUDA-compatible GPU (your Dockerfile uses CUDA 11.8)
+- CUDA-compatible GPU (your Dockerfile uses CUDA 11.8).
 
 Test GPU availability inside the container:
 

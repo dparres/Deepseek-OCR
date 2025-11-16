@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0.0", "wheel", "setuptools_scm>=6.2"]
+requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 
@@ -8,17 +8,12 @@ name = "deepseek-ocr"
 version = "0.1.0"
 description = "Project leveraging Deepseek-OCR for advanced Optical Character Recognition tasks."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10.12"
 license = { text = "MIT" }
 authors = [
-    { name = "Daniel Parres" }
+    { name = "Daniel Parres (github: https://github.com/dparres/Deepseek-OCR)" }
 ]
 keywords = ["ocr", "deepseek", "pytorch", "deep-learning", "vision"]
-
-[project.urls]
-Homepage = "https://github.com/dparres/Deepseek-OCR"
-Repository = "https://github.com/dparres/Deepseek-OCR"
-Issues = "https://github.com/dparres/Deepseek-OCR/issues"
 
 
 # Runtime Dependencies (Core Project Requirements)
@@ -92,3 +87,7 @@ exclude = '''
 profile = "black"
 line_length = 88
 known_first_party = "deepseek_ocr"
+
+[tool.uv]
+# Extra index URL specifically for PyTorch CUDA 11.8 wheels.
+extra-index-url = ["https://download.pytorch.org/whl/cu118"]
