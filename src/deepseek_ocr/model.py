@@ -63,6 +63,9 @@ class DeepSeekOCRModel:
         self.logger.info("Model base components initialized successfully on GPU.")
 
     def _init_logger(self) -> None:
+        """
+        Initializes the logger.
+        """
         # Setup Logging
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.INFO)

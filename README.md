@@ -11,15 +11,6 @@ The environment automatically configures Python, installs dependencies, and enab
 
 ---
 
-## Features
-
-- **GPU support** via CUDA (`Dockerfile`)  
-- **Automatic Python environment** using `uv venv`  
-- **Editable install** for local development (`src/deepseek_ocr`)  
-- **Example inference script** (`run_model_script.py`)  
-
----
-
 ## Running in VS Code (Recommended)
 
 1. Open the project folder in **VS Code**  
